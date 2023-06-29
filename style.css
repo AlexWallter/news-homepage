@@ -1,0 +1,253 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --drayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --dark-blue: hsl(240, 100%, 5%);
+    --off-white: hsl(36, 100%, 99%);
+    --soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 4rem 6rem;
+    font-size: 15px;
+}
+
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topic:hover,
+.article-title:hover,
+.top-title:hover {
+    cursor: pointer;
+    color: var(--Soft-red);
+}
+
+
+h1 {
+    font-size: 3.4rem;
+}
+
+#trending {
+    margin: 0em 3em;
+}
+
+#popular,
+#new {
+    margin-left: 3em;
+}
+
+#content-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+}
+
+#content-container {
+    margin: 3rem 0;
+}
+
+.paragraph {
+    margin: 1em 0;
+    line-height: 1.7;
+    color: var(--dark-grayish-blue);
+}
+
+#btn {
+    width: 12rem;
+    height: 3rem;
+    background-color: var(--Soft-red);
+    color: var(--off-white);
+    transition: .5s;
+    border: none;
+}
+
+#btn:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+#right-part {
+    padding: 2.5em;
+    background-color: var(--dark-blue);
+    color: var(--off-white);
+}
+
+#right-part .paragraph {
+    padding-bottom:2em;
+    border-bottom: solid 1px;
+    margin-bottom: 2em;
+}
+
+#right-part #last-paragraph {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#right-part p,
+.top-num  {
+    color: var(--drayish-blue);
+}
+
+.top-num {
+    font-size: 2rem;
+}
+
+#news-mark {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+    color: var(--soft-orange);
+}
+
+#top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+}
+
+.text {
+    padding-right: 1em;
+}
+
+.top-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    width: fit-content;
+}
+
+.top-article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+@media(max-width: 600px) {
+
+    body {
+        width: 100vw;
+        margin: 2.5em 1em;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    #nav-bar {
+        display: relative;
+    }
+
+    #nav-bar::after {
+        content: "\f0c9";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 800;
+        font-size: 3rem;
+        top: 1em;
+        right: 0;
+        cursor: pointer;   
+    }
+    
+    #links {
+        visibility: hidden;
+        width: 0px;
+    }
+    
+    #links .visible {
+        visibility: visible;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80vw;
+        height: 100vh;
+        background-color: var(--off-white);
+        justify-content: center;
+        align-items: flex-start;
+        align-items: left;
+    }
+
+    #links .visible::before {
+        content: "\f00d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 800;
+        font-size: 3rem;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        cursor: pointer;
+    }
+
+
+    #popular,
+    #new,
+    #trending,
+    #home,
+    #categories {
+        width: 0px;
+    }
+
+    .visible #popular,
+    .visible #new,
+    .visible #trending,
+    .visible #home,
+    .visible #categories {
+        margin: 1em 2em 2em 0 ;
+        position: relative;
+        font-weight: 700;
+        width: auto;
+    }
+
+    #content-container, 
+    #top,
+    #info {
+        grid-template-columns: 1fr;
+        row-gap: 1em;
+    }
+
+    #content-container,
+    .paragraph {
+        margin: 0;
+    }
+
+    #main-upper,
+    #left-part {
+        margin-bottom: 4em;
+    }
+
+    .text {
+        margin-left: 1em;
+    }
+
+    #paragraph-container {
+        height: fit-content;
+    }
+}

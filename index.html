@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+
+  <title>Frontend Mentor | News homepage</title>
+</head>
+<body>
+  <main>
+    <nav id = "nav-bar">
+      <div>
+        <h1 id="title">W.</h1>
+      </div>
+      <div id="links">
+        <p id = "home" class = "topic">Home</p>
+        <p id = "new" class = "topic">New</p> 
+        <p id = "popular" class = "topic">Popular</p>
+        <p id = "trending" class = "topic">Trending</p>
+        <p id = "categories" class = "topic">Categories</p>
+      </div>
+    </nav>
+    <div id="main-upper">
+      <div id="content-container">
+        <div id="left-part">
+          <picture>
+            <source media="(min-width: 1000px)" srcset="./assets/images/image-web-3-desktop.jpg">
+            <img src="./assets/images/image-web-3-mobile.jpg" alt="IfItDoesntMatchAnyMedia" id = "mobile-image1">
+        </picture>
+          <div id="info">
+            <div id="bold">
+              <h1>The Bright Future of Web 3.0?</h1>
+          </div>
+            <div id="paragraph-container">
+              <p class = "paragraph">  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+                But is it really fulfilling its promise?</p>
+                <button id = "btn"> Read More</button>
+            </div>
+          </div>
+        </div>
+        <div id="right-part">
+          <div id="news">
+            <h2 id = "news-mark">New</h2>
+            <div id="news1"> 
+              <h3 class = "article-title">Hydrogen VS Electric Cars</h3>
+              <p class = "paragraph">Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
+            <div id="news2">
+              <h3 class = "article-title">The Downsides of AI Artistry</h3>
+              <p class = "paragraph">  What are the possible adverse effects of on-demand AI image generation?</p>              
+            </div>
+            <div id="news3">
+              <h3 class = "article-title">Is VC Funding Drying Up?</h3>
+              <p class = "paragraph"  id = "last-paragraph">  Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main-bottom">
+      <div id="top">
+        <div class="top-article">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="">
+          <div class="text">
+            <h2 class="top-num">01</h2>
+            <p class = "top-title">Reviving Retro PCs</p>
+            <p class = "paragraph">What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="top-article">
+          <img src="./assets/images/image-top-laptops.jpg" alt="">
+          <div class="text">
+            <h2 class="top-num">02</h2>
+            <p class = "top-title">Top 10 Laptops of 2022</p>
+            <p class = "paragraph">Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="top-article">
+          <img src="./assets/images/image-gaming-growth.jpg" alt="">
+          <div class="text">
+            <h2 class="top-num">03</h2>
+            <p class = "top-title">The Growth of Gaming</p>
+            <p class = "paragraph">How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
