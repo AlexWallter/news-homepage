@@ -87,6 +87,7 @@ img {
     color: var(--off-white);
     transition: .5s;
     border: none;
+    margin-top: 1em;
 }
 
 #btn:hover {
@@ -147,15 +148,25 @@ img {
 .top-article {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    column-gap: .5em;
 }
 
 @media(max-width: 600px) {
 
+    html,body{
+        overflow-x: hidden;
+    }
+
     body {
-        width: 100vw;
         margin: 2.5em 1em;
         display: grid;
         grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    main {
+        max-width: 330px;
+        justify-self: center;
     }
 
     h1 {
@@ -163,39 +174,40 @@ img {
     }
 
     #nav-bar {
-        display: relative;
+        position: relative;
     }
 
-    #nav-bar::after {
+    #bars::after {
         content: "\f0c9";
         font-family: "Font Awesome 5 Free";
         font-weight: 800;
-        font-size: 3rem;
-        top: 1em;
+        font-size: 2.5rem;
+        width: fit-content;
+        position: absolute;
+        bottom: 0;
         right: 0;
-        cursor: pointer;   
+        cursor: pointer;
     }
     
     #links {
-        visibility: hidden;
-        width: 0px;
+        translate: 100vw;
+        transition: .8s;
     }
     
-    #links .visible {
-        visibility: visible;
+    #links.visible {
+        translate: 0;
+        transition: .8s;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
-        width: 80vw;
+        width: 70vw;
         height: 100vh;
         background-color: var(--off-white);
         justify-content: center;
-        align-items: flex-start;
-        align-items: left;
     }
 
-    #links .visible::before {
+    #links.visible #close::before {
         content: "\f00d";
         font-family: "Font Awesome 5 Free";
         font-weight: 800;
@@ -206,13 +218,9 @@ img {
         cursor: pointer;
     }
 
-
-    #popular,
-    #new,
-    #trending,
-    #home,
-    #categories {
+    .topic {
         width: 0px;
+        overflow: hidden;
     }
 
     .visible #popular,
@@ -220,9 +228,10 @@ img {
     .visible #trending,
     .visible #home,
     .visible #categories {
-        margin: 1em 2em 2em 0 ;
+        margin: 1em 2em 1em 1em ;
         position: relative;
-        font-weight: 700;
+        font-weight: 400;
+        font-size: 1.25rem;
         width: auto;
     }
 
@@ -240,7 +249,7 @@ img {
 
     #main-upper,
     #left-part {
-        margin-bottom: 4em;
+        margin-bottom: 2.5em;
     }
 
     .text {
@@ -249,5 +258,14 @@ img {
 
     #paragraph-container {
         height: fit-content;
+    }
+
+    .top-title {
+        margin-top: 0em;
+        font-size: 1rem;
+    }
+
+    .text .paragraph {
+        font-size: 13px;
     }
 }
